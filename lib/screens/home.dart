@@ -47,7 +47,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
-                      for (ToDo todoo in _foundTodo)
+                      for (ToDo todoo in _foundTodo.reversed)
                         TodoItem(
                           todo: todoo,
                           onToDoChanged: _handleToDoChange,
@@ -167,6 +167,7 @@ class _HomeState extends State<Home> {
         borderRadius: BorderRadius.circular(20),
       ),
       child: TextField(
+        onChanged: (value) => _runFilter(value) ,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.all(0),
           prefixIcon: Icon(
