@@ -188,28 +188,39 @@ class _HomeState extends State<Home> {
   }
 
   AppBar _buildAppBar() {
-    return AppBar(
-      backgroundColor: steelTealDarker,
-      elevation: 0,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Icon(
-            Icons.menu,
+  return AppBar(
+    backgroundColor: steelTealDarker,
+    elevation: 0,
+    title: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Icon(
+          Icons.menu,
+          color: tealBlue,
+          size: 30,
+        ),
+        Spacer(),
+        Text(
+          'TodoEase',
+          style: TextStyle(
             color: tealBlue,
+            fontWeight: FontWeight.bold,
+            fontSize: 25,
+          ),
+        ),
+        Spacer(),
+        Container(
+          height: 40,
+          width: 40,
+          child: Icon(
+            Icons.account_circle,
             size: 30,
+            color: tealBlue,
           ),
-          Container(
-            height: 40,
-            width: 40,
-            child: Icon(
-              Icons.account_circle,
-              size: 30,
-              color: tealBlue,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+        ),
+      ],
+    ),
+  );
+}
+
 }
